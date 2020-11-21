@@ -81,7 +81,7 @@ function App() {
   return (
     <div className='container text-center  mt-5 '>
          <div className='row d-flex justify-content-center'>
-           <div className='col-md-6 mt-5'>
+           <div className='col-md-6 mt-5 bgmain'>
            <h1>TaskBox</h1>
                     <form onSubmit={HandleSubmit} className='mt-3'>
                         <div className="form-group">

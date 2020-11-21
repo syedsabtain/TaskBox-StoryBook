@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Story } from '@storybook/react/types-6-0';
 import Taskbox,{Taskcompa} from '../Components/Taskcomp'
 import '../styles/comp.css'
@@ -207,4 +207,70 @@ Multiple_Checked_And_Pinned.args ={
         pinned:true,
         check:true
     }]
+}
+
+export const Fullly= ()=>{
+
+    let[dataa,setDataa] = useState([ {
+        id:0,
+        task:'Task',
+        check:false,
+        pinned:false,
+    },{
+        id:1,
+        task:" Task",
+        pinned:false,
+        check:false
+    },
+    {
+        id:2,
+        task:" Task",
+        pinned:false,
+        check:false
+    },
+    {
+        id:3,
+        task:" Task",
+        pinned:false,
+        check:false
+    }]);
+    const handlecheck=(id:number)=>{
+    
+         
+        let result = dataa?.map((value)=>{
+         if(value?.id===id){
+             return{
+                 ...value,
+                 check:!value?.check
+             }
+         }
+         else{
+             return value
+         }
+    
+     })
+    
+     setDataa(result)
+     }
+     const handlePinned=(id:number)=>{
+         let result = dataa?.map((value:any)=>{
+             if(value.id===id){
+                 return{
+                     ...value,
+                     pinned:!value.pinned
+                 }
+             }
+             else{
+                 return value
+             }
+         })
+         
+        setDataa(result)
+      
+     }
+
+     return(
+         <Taskbox Data={dataa} handlePinned={handlePinned} handlecheck={handlecheck}></Taskbox>
+     )
+   
 }

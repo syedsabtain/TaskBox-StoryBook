@@ -10,3 +10,11 @@
 .forline{
   text-decoration: line-through !important;
 }
+.bgmain{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.8015581232492998) 1%, rgba(121,9,45,0.8435749299719888) 45%, rgba(0,212,255,0.8519782913165266) 99%);
+padding: 30px;
+border-radius: 10px;
+color: white;
+text-shadow: 2px 2px 2px black;
+}

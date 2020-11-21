@@ -5,6 +5,8 @@ import {ImCheckboxUnchecked} from 'react-icons/im'
 import {VscPinned} from 'react-icons/vsc'
 import '../styles/comp.css'
 
+
+
 type Data={
     
         id:number,
@@ -31,7 +33,7 @@ const Taskcomp:React.FC<Taskcompa>= ({
     return(
         <div className='container mt-5 mb-5'>
             <div className='row d-flex justify-content-center'>
-                <div className='col-md-6 mt-5 text-center mb-5'>
+                <div className='col-md-6 mt-5 text-center mb-5 bgtask '>
                     <h1>TaskList</h1>
                     <ul className="list-group">
                      {Data?.length  ? (
@@ -40,7 +42,7 @@ const Taskcomp:React.FC<Taskcompa>= ({
                           if(value.pinned===true){
                             return(
                                 <li key={key} className="list-group-item list-group-item-action d-flex justify-content-between ">
-                                <span>{value.task}</span><span >{value.check ? (<AiFillStar  className=' star ' onClick={()=>{handlecheck(value.id)}}></AiFillStar>) : (<AiOutlineStar className='unstar'  onClick={()=>{handlecheck(value.id)}}></AiOutlineStar>)}
+                                <span className='listitem'>{value.task}</span><span >{value.check ? (<AiFillStar  className=' star ' onClick={()=>{handlecheck(value.id)}}></AiFillStar>) : (<AiOutlineStar className='unstar'  onClick={()=>{handlecheck(value.id)}}></AiOutlineStar>)}
                               {value.pinned ? (<VscPinned className='pinned' title='Pinned' onClick={()=>{handlePinned(value.id)}}></VscPinned>) : (<ImCheckboxUnchecked className='unpinned' title='Pin It' onClick={()=>{handlePinned(value.id)}}></ImCheckboxUnchecked>)}</span></li>
                               )
                           }
@@ -53,14 +55,14 @@ const Taskcomp:React.FC<Taskcompa>= ({
                           if(value.pinned===false){
                             return(
                                 <li key={key} className="list-group-item list-group-item-action d-flex justify-content-between ">
-                                <span>{value.task}</span><span >{value.check ? (<AiFillStar  className=' star ' onClick={()=>{handlecheck(value.id)}}></AiFillStar>) : (<AiOutlineStar className='unstar'  onClick={()=>{handlecheck(value.id)}}></AiOutlineStar>)}
+                                <span className='listitem'>{value.task}</span><span >{value.check ? (<AiFillStar  className=' star ' onClick={()=>{handlecheck(value.id)}}></AiFillStar>) : (<AiOutlineStar className='unstar'  onClick={()=>{handlecheck(value.id)}}></AiOutlineStar>)}
                               {value.pinned ? (<VscPinned className='pinned' title='Pinned' onClick={()=>{handlePinned(value.id)}}></VscPinned>) : (<ImCheckboxUnchecked className='unpinned' title='Pin It' onClick={()=>{handlePinned(value.id)}}></ImCheckboxUnchecked>)}</span></li>
                               )
                           }
                           
                       })}</>
                      ) : (
-                        <li  className="list-group-item list-group-item-action d-flex justify-content-between ">Waiting For New Task</li>
+                        <li  className="list-group-item list-group-item-action listitem d-flex justify-content-between ">Waiting For New Task</li>
                      )}
 
                     </ul>

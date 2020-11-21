@@ -7,7 +7,7 @@ import '../styles/all.min.css'
 const Footer =()=>{
 
     return(
-        <footer className="page-footer font-small  darken-3 text-center mt-5">
+        <footer className="page-footer font-small  darken-3 text-center mt-5 text-white">
 
             <div className="container mt-5">
 
