@@ -1,0 +1,8 @@
+[1011/075613.307:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1012/105813.190:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1012/132919.480:ERROR:process_reader_win.cc(127)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1012/132919.495:ERROR:exception_snapshot_win.cc(100)] thread ID 9304 not found in process
+[1012/132919.855:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\SYED\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\d8c4d38b-fac0-4ab4-9201-06df50553c9a: The system cannot find the path specified. (0x3)
+[1013/031554.663:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1013/110723.639:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1018/013246.805:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

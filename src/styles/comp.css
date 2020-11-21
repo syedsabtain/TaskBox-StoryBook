@@ -1,0 +1,18 @@
+.star{
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+  
+}
+.unstar{
+
+    font-size: 24px;
+
+}
+.unpinned{
+    font-size: 18px;
+}
+.pinned{
+    font-size: 24px;
+
+}
