@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 import Taskbox from './Components/Taskcomp'
 import { useForm } from 'react-hook-form';
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -100,6 +101,7 @@ function App() {
          </div>
          <Taskbox Data={data} handlePinned={handlePinned} handlecheck={handlecheck}></Taskbox>
 
+     <Footer></Footer>                                    
     </div>
   );
 }
